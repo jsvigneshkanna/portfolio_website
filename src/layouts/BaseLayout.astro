@@ -1,5 +1,10 @@
 ---
-const childProps = Astro.props;
+export interface props {
+  title?: string;
+}
+
+const { title = "" } = Astro.props;
+import DarkModeToggle from "../components/darkModeToggle";
 ---
 
 <html lang="en">
@@ -8,9 +13,30 @@ const childProps = Astro.props;
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{childProps.title}</title>
+    <title>J S Vignesh Kanna | {title}</title>
   </head>
   <body>
+    <DarkModeToggle client:visible />
     <slot />
+
+    <!-- Inline Script for darkmode toggle to avoid FCUS -->
+    <script is:inline>
+      function getUserTheme() {
+        try {
+          return localStorage.getItem("theme");
+        } catch {
+          return null;
+        }
+      }
+      const userTheme = getUserTheme();
+      const isDarkOs = matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = userTheme === "dark" || (!userTheme && isDarkOs);
+      const html = document.documentElement;
+      if (isDark) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+    </script>
   </body>
 </html>
