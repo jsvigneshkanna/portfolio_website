@@ -1,0 +1,19 @@
+---
+import DarkModeToggle from "../components/darkModeToggle";
+---
+
+<div>
+  <nav class="flex flex-row justify-between items-center mx-4 md:mx-60">
+    <div>
+      <p>LOGO</p>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-8">
+      <a href="/">Home</a>
+      <a href="/post">Posts</a>
+      <a href="/contactus">Contact Us</a>
+    </div>
+    <div>
+      <DarkModeToggle client:visible />
+    </div>
+  </nav>
+</div>

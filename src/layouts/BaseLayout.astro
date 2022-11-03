@@ -4,7 +4,7 @@ export interface props {
 }
 
 const { title = "" } = Astro.props;
-import DarkModeToggle from "../components/darkModeToggle";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -16,7 +16,7 @@ import DarkModeToggle from "../components/darkModeToggle";
     <title>J S Vignesh Kanna | {title}</title>
   </head>
   <body>
-    <DarkModeToggle client:visible />
+    <Header />
     <slot />
 
     <!-- Inline Script for darkmode toggle to avoid FCUS -->
