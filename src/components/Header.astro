@@ -1,16 +1,23 @@
 ---
 import DarkModeToggle from "../components/darkModeToggle";
+import NavLink from "./NavLink.astro";
+import vk_logo from "../assets/vk-round-logo.png";
+
+// nav links mapping
+const navLinks = [
+  ["home", "home"],
+  ["blog", "blogs"],
+  ["contact me", "contact"],
+];
 ---
 
 <div>
-  <nav class="flex flex-row justify-between items-center mx-4 md:mx-60">
+  <nav class="flex flex-row justify-between items-center mx-4 md:mx-60 py-1">
     <div>
-      <p>LOGO</p>
+      <img src={vk_logo} alt="logo" class="w-14 h-auto rounded-full bg-slate-300 shadow-lg shadow-red-400" />
     </div>
     <div class="flex flex-row justify-center items-center gap-8">
-      <a href="/">Home</a>
-      <a href="/post">Posts</a>
-      <a href="/contactus">Contact Us</a>
+      {navLinks.map((navLink) => <NavLink navHeader={navLink[0]} navHref={navLink[1]} />)}
     </div>
     <div>
       <DarkModeToggle client:visible />
