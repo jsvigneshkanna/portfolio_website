@@ -1,5 +1,5 @@
 import { MdClose } from "react-icons/md/index";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi/index";
 import { useState, useEffect } from "react";
 import NavLink from "./NavLink.astro";
 import vk_logo from "../assets/vk-round-logo.png";
