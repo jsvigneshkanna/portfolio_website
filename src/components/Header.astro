@@ -2,6 +2,7 @@
 import DarkModeToggle from "../components/darkModeToggle";
 import NavLink from "./NavLink.astro";
 import vk_logo from "../assets/vk-round-logo.png";
+import HamburgerMenu from "./HamburgerMenu";
 
 const navLinks = [
   {
@@ -21,7 +22,7 @@ const navLinks = [
 
 <div>
   <div class="bg-slate-300 dark:bg-slate-900 text-zinc-800 dark:text-blue-500">
-    <nav class="flex flex-row justify-between items-center mx-4 md:mx-72 py-2">
+    <nav class="flex-row justify-between items-center mx-4 md:mx-72 py-2 hidden md:flex">
       <div class="rounded-full shadow-md shadow-slate-700 dark:shadow-indigo-500/40">
         <img src={vk_logo} alt="logo" class="w-10 md:w-14 h-auto" />
       </div>
@@ -32,5 +33,8 @@ const navLinks = [
         <DarkModeToggle client:visible />
       </div>
     </nav>
+    <div class="flex justify-between md:hidden text-2xl py-3 mx-4">
+      <HamburgerMenu client:load />
+    </div>
   </div>
 </div>
