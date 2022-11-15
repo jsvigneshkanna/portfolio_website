@@ -1,8 +1,16 @@
 ---
 const navHeader = Astro.props.navHeader;
 const navHref = Astro.props.navHref;
+const isCurrent = Astro.url.pathname.startsWith(navHref);
 ---
 
 <div>
-  <a href={navHref}>{navHeader}</a>
+  <a
+    href={navHref}
+    aria-current={isCurrent ? "page" : "false"}
+    class:list={[
+      " font-bold text-base hover:text-zinc-600 hover:dark:text-blue-400 transition-transform",
+      isCurrent ? "underline underline-offset-4 decoration-slate-700 dark:decoration-slate-100 decoration-2" : "",
+    ]}>{navHeader}</a
+  >
 </div>
