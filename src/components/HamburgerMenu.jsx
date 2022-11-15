@@ -1,4 +1,4 @@
-import { MdClose } from "react-icons/md";
+import { MdClose } from "react-icons/md/index";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState, useEffect } from "react";
 import NavLink from "./NavLink.astro";
