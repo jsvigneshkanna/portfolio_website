@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import DarkModeToggle from '../components/darkModeToggle.jsx';
 ---
 
 <Layout title="Home">
 	<main>
         <h1 class="text-center font-black text-9xl">Rishi is Good boy</h1>
+        <DarkModeToggle client:load />
     </main>
 </Layout>

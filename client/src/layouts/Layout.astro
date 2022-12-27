@@ -15,7 +15,26 @@ const { title='Home' } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Vignesh Kanna | {title}</title>
 	</head>
-	<body class=" bg-slate-900 min-h-screen text-white">
+	<body class=" bg-slate-50 dark:bg-slate-900 min-h-screen text-slate-800 dark:text-white">
 		<slot />
 	</body>
+    <!-- Inline Script for darkmode toggle to avoid FCUS -->
+    <script is:inline>
+      function getUserTheme() {
+        try {
+          return localStorage.getItem("theme");
+        } catch {
+          return null;
+        }
+      }
+      const userTheme = getUserTheme();
+      const isDarkOs = matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = userTheme === "dark" || (!userTheme && isDarkOs);
+      const html = document.documentElement;
+      if (isDark) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+    </script>
 </html>
