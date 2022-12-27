@@ -4,6 +4,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs/index.js";
 
 const DarkModeToggle = () => {
   const { theme, toggle } = useTheme();
+
   const Icon = theme === "light" ? BsFillMoonStarsFill : HiSun;
   return (
     <button

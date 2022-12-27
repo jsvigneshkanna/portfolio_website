@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState<string>("dark");
   useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark") || localStorage.getItem("theme") == "dark";
-    console.log("test: ", isDark);
+    const isDark: boolean =
+      document.documentElement.classList.contains("dark") || localStorage.getItem("theme") == "dark";
     setTheme(isDark ? "dark" : "light");
   }, [theme]);
   const toggle = () => {
@@ -16,8 +16,8 @@ export const useTheme = () => {
   return { theme, toggle };
 };
 
-const toggleHtml = (theme) => {
-  const doc = document.documentElement;
+const toggleHtml = (theme: string) => {
+  const doc: HTMLElement = document.documentElement;
   if (theme === "light") {
     doc.classList.remove("dark");
   } else {
@@ -25,10 +25,11 @@ const toggleHtml = (theme) => {
   }
 };
 
-const storeThemeLocalStorage = (theme) => {
+const storeThemeLocalStorage = (theme: string) => {
   try {
     localStorage.setItem("theme", theme);
   } catch (error) {
     // Nothing to do much, so sad 😥
+    console.error("Error while setting theme in local storage 😢");
   }
 };
