@@ -11,7 +11,7 @@ const DarkModeToggle = () => {
       aria-label="toggle-darkmode"
       type="button"
       onClick={toggle}
-      className="p-2 hover:scale-110 active:scale-90 transition-transform text-blue-700 dark:text-yellow-300"
+      className="p-2 hover:scale-110 active:scale-90 transition-transform text-slate-800 dark:text-yellow-200"
     >
       <Icon size={26} />
     </button>
