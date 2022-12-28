@@ -22,9 +22,9 @@ const navLinks = [
 ];
 ---
 
-<div class="flex justify-between items-center bg-blue-200/90 dark:bg-blue-700/90 shadow-md shadow-slate-400 dark:shadow-slate-700/75 px-4 md:px-52">
+<div class="flex justify-between items-center bg-blue-200/90 dark:bg-blue-700/90 shadow-md shadow-slate-400 dark:shadow-slate-700/75 px-4 md:px-72 py-3">
   {/* Left navlinks */}
-  <div class="flex justify-center items-center gap-8">
+  <div class="flex justify-center items-center gap-6 ">
     {
         navLinks.map((navLink) => <NavLink navHeader={navLink["name"]} navHref={navLink["href"]} />)
     }
