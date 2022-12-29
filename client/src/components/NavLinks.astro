@@ -1,6 +1,4 @@
 ---
-import { log } from 'astro/dist/core/logger/core';
-
 interface Props {
     navHeader: string;
     navHref: string;
@@ -20,3 +18,4 @@ const isCurrent = Astro.url.pathname.endsWith(navHref);
     ]}>{navHeader}</a
   >
 </div>
+
