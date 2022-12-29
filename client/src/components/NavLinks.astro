@@ -9,8 +9,8 @@ const isCurrent = Astro.url.pathname.startsWith(navHref);
     href={navHref}
     aria-current={isCurrent ? "page" : "false"}
     class:list={[
-      " font-bold text-lg hover:scale-105 capitalize dark:hover:bg-blue-900 hover:bg-blue-300/70 px-3 py-1 rounded-lg transition-transform transition-shadow hover:shadow-md hover:shadow-blue-400/80 dark:hover:shadow-blue-900/90",
-      isCurrent ? "dark:decoration-blue-300 shadow-md shadow-indigo-400/80 dark:shadow-indigo-800" : "",
+      " font-bold text-lg hover:scale-105 capitalize dark:hover:bg-blue-700 hover:bg-blue-400/70 px-3 py-1 rounded-lg transition-transform transition-shadow hover:shadow-md hover:shadow-blue-400/80 dark:hover:shadow-blue-900/90",
+      isCurrent ? "shadow-md shadow-cyan-500 dark:shadow-indigo-900" : "",
     ]}>{navHeader}</a
   >
 </div>
