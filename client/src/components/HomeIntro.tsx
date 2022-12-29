@@ -5,17 +5,17 @@ type Props = {};
 
 const HomeIntro = (props: Props) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0 my-20 lg:my-10">
-      <div className=" min-w-max">
+    <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0 mt-32 md:my-20 lg:my-10">
+      <div className=" min-w-max ">
         <img
           src={vk_image}
           alt="vignesh kanna image"
-          className=" rounded-[50%] w-60 h-60 lg:w-80 lg:h-80 object-fill"
+          className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-fill shadow-lg shadow-slate-800/60 dark:shadow-zinc-800/70"
         />
       </div>
       <div className="flex flex-col gap-8">
         <h1 className=" text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">J S Vignesh Kanna</h1>
-        <h3 className="text-lg lg:text-xl md:text-xl 2xl:text-3xl font-semibold tracking-widest text-red-400 dark:text-blue-500">
+        <h3 className="text-lg lg:text-xl md:text-xl 2xl:text-3xl font-semibold tracking-widest text-red-600 dark:text-blue-600">
           <Typewriter
             options={{
               strings: [
