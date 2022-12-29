@@ -29,7 +29,7 @@ const MobileNavbar = (props: Props) => {
   const MenuIcon = isMenuOpen ? <RiCloseFill size={24} /> : <GiHamburgerMenu size={24} />;
   return isMenuOpen ? (
     <div
-      className="flex flex-col justify-center items-center gap-20 py-20 mx-auto absolute top-0 left-0 w-full
+      className="flex flex-col justify-center items-center gap-20 py-20 pt-40 mx-auto absolute top-0 left-0 w-full
     dark:bg-gradient-to-br dark:from-purple-900 bg-gradient-to-bl from-blue-300 to-orange-400 dark:to-cyan-800 z-10"
     >
       <div className="absolute top-10 left-6">
