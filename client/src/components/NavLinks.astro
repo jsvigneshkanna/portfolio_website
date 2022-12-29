@@ -1,4 +1,8 @@
 ---
+interface Props {
+    navHeader: string;
+    navHref: string;
+}
 const navHeader = Astro.props.navHeader;
 const navHref = Astro.props.navHref;
 const isCurrent = Astro.url.pathname.startsWith(navHref);
