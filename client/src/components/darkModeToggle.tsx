@@ -1,4 +1,4 @@
-import { useTheme } from "../../hooks/useTheme";
+import { useTheme } from "../hooks/useTheme";
 import { HiSun } from "react-icons/hi/index.js";
 import { BsFillMoonStarsFill } from "react-icons/bs/index.js";
 
