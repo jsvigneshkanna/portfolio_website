@@ -5,7 +5,7 @@ type Props = {};
 
 const HomeIntro = (props: Props) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0">
+    <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0 my-20 lg:my-10">
       <div className=" min-w-max">
         <img
           src={vk_image}
