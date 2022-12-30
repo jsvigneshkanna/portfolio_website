@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'post',
-  title: 'Post',
+  name: 'projects',
+  title: 'Projects',
   type: 'document',
   fields: [
     defineField({
@@ -20,29 +20,35 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: 'techUsed',
+      title: 'Technology Used',
+      type: 'string',
+      description: 'Type all the technologies used seperated with commas. ex, <astro, js, python>',
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'githubUrl',
+      title: 'Github URL',
+      type: 'string',
+      description: 'Enter the project github url | if not leave empty',
+    }),
+    defineField({
+      name: 'projectUrl',
+      title: 'Project URL',
+      type: 'string',
+      description: 'Enter the project url - published sites | if not leave empty',
+    }),
+    defineField({
+      name: 'thumbnailImage',
+      title: 'Thumbnail image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'createdAt',
+      title: 'Created at',
+      type: 'date',
     }),
     defineField({
       name: 'body',
