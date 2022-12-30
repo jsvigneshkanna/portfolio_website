@@ -1,16 +1,24 @@
-import vk_image from "../assets/vk_banner_image.jpg";
+import vk_image from "../../assets/vk_banner_image.jpg";
 import Typewriter from "typewriter-effect";
+import { motion as fm } from "framer-motion";
 
 type Props = {};
 
 const HomeIntro = (props: Props) => {
   return (
     <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0 mt-32 md:my-20 lg:my-10">
-      <div className=" min-w-max ">
-        <img
+      <div className=" min-w-max">
+        <fm.img
+          whileHover={{ scale: [1, 1.05, 1.1, 1.05, 1, 0.9, 1], rotate: [0, 15, 0, -10, 0, 15, 0] }}
+          whileTap={{ scale: [1, 1.05, 1.1, 1.05, 1, 0.9, 1], rotate: [0, 15, 0, -10, 0, 15, 0] }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            times: [0, 0.1, 0.3, 0.5, 0.7, 0.8, 1],
+          }}
           src={vk_image}
           alt="vignesh kanna image"
-          className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-fill shadow-lg shadow-slate-800/60 dark:shadow-slate-800/90"
+          className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-fill shadow-md shadow-slate-800/80 dark:shadow-blue-900/50"
         />
       </div>
       <div className="flex flex-col gap-8">
