@@ -19,16 +19,5 @@ import sanity from "astro-sanity";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    react(),
-    tailwind(),
-    mdx(),
-    sanity({
-      projectId: "gu3yw96b",
-      apiVersion: "2021-10-21",
-      useCdn: true,
-      dataset: "production",
-      ignoreBrowserTokenWarning: true,
-    }),
-  ],
+  integrations: [react(), tailwind(), mdx()],
 });

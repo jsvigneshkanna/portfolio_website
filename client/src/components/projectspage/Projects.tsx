@@ -17,9 +17,9 @@ const Projects = (props: Props) => {
     console.log("test1");
 
     fetchProjects();
-  }, [projects]);
+  }, []);
 
-  return <div className="px-4 md:px-10 lg:px-60 2xl:px-72 mt-8">{projects}</div>;
+  return <div className="px-4 md:px-10 lg:px-60 2xl:px-72 mt-8">{JSON.stringify(projects)}r</div>;
 };
 
 export default Projects;
