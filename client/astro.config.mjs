@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -13,8 +13,22 @@ import netlify from "@astrojs/netlify/functions";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
+import sanity from "astro-sanity";
+
+// https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), mdx()],
-  output: "server",
-  adapter: netlify()
+  integrations: [
+    react(),
+    tailwind(),
+    mdx(),
+    sanity({
+      projectId: "gu3yw96b",
+      apiVersion: "2021-10-21",
+      useCdn: true,
+      dataset: "production",
+      ignoreBrowserTokenWarning: true,
+    }),
+  ],
 });
