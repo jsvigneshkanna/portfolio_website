@@ -10,7 +10,7 @@ const MobileNavLinks = (props: Props) => {
     <div>
       <a
         href={navHref}
-        className="font-bold text-lg hover:scale-105 capitalize dark:hover:bg-cyan-700 hover:bg-blue-300 px-3 py-1 rounded-lg transition-shadow hover:shadow-md hover:shadow-blue-400/80 dark:hover:shadow-blue-900/90"
+        className="font-bold text-xl hover:scale-105 capitalize dark:hover:bg-cyan-700 hover:bg-blue-300 px-6 py-2 rounded-xl transition-shadow hover:shadow-md hover:shadow-blue-400/80 dark:hover:shadow-blue-900/90"
       >
         {navHeader}
       </a>
