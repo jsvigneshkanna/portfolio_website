@@ -1,8 +1,8 @@
 import { useState } from "react";
 import MobileNavLinks from "./MobileNavLinks";
 import DarkModeToggle from "./darkModeToggle";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RiCloseFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi/index.js";
+import { RiCloseFill } from "react-icons/ri/index.js";
 import { motion as fm } from "framer-motion";
 
 type Props = {};
