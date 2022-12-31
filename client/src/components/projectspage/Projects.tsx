@@ -17,8 +17,8 @@ const Projects = (props: Props) => {
   }, []);
 
   return (
-    <div className="px-4 md:px-10 lg:px-60 2xl:px-72 mt-8">
-      <div className="flex flex-wrap gap-10 justify-center items-center">
+    <div className="px-8 md:px-10 lg:px-60 2xl:px-72 mt-8">
+      <div className="flex flex-wrap gap-10 justify-between items-center mt-12">
         {projects.map((project) => {
           return <ProjectCard projectDetails={project} />;
         })}
