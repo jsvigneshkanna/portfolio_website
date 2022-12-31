@@ -51,6 +51,11 @@ export default defineType({
       type: 'date',
     }),
     defineField({
+      name: 'projectDesc',
+      title: 'Project Description',
+      type: 'text',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
