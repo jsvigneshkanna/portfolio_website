@@ -1,4 +1,6 @@
 import { urlFor } from "../../sanity/api";
+import TechIcons from "../common/TechIcons";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 type Props = {
   projectDetails: any;
@@ -6,6 +8,10 @@ type Props = {
 
 const ProjectCard = (props: Props) => {
   const projectDetails = props.projectDetails;
+  const getTechUsed = (techUsed: string) => {
+    return techUsed.split(",");
+  };
+  const techUseds = getTechUsed(projectDetails.techUsed);
   return (
     <div className=" w-[280px] md:w-[400px] bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg overflow-hidden flex-grow hover:scale-105">
       <img src={urlFor(projectDetails.thumbnailImage.asset._ref).url()} alt="project image" />
@@ -14,10 +20,31 @@ const ProjectCard = (props: Props) => {
           {projectDetails.title}
         </h3>
         <p className=" text-center font-semibold">{projectDetails.projectDesc}</p>
-      </div>
+        {/* Tech icons */}
+        <div className="flex flex-row flex-wrap gap-8 text-2xl justify-center items-center">
+          {techUseds.map((techUsed, index) => {
+            return <TechIcons tech={techUsed} key={index} />;
+          })}
+        </div>
+        {/* Github and demo link */}
+        <div className="flex flex-row justify-between items-center gap-12 text-lg">
+          {projectDetails.githubUrl ? (
+            <a href={projectDetails.githubUrl} rel="noreferrer" target="_blank">
+              <FaGithub />
+            </a>
+          ) : (
+            ""
+          )}
 
-      {/* Tech icons */}
-      <div></div>
+          {projectDetails.projectUrl ? (
+            <a href={projectDetails.projectUrl} rel="noreferrer" target="_blank">
+              <FaExternalLinkAlt />
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
     </div>
   );
 };
