@@ -2,7 +2,7 @@ import { getAllProjects, getFilterProjects } from "../../sanity/api";
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 // import TechFilter from "../common/TechFilter";
-import * as Loader from "react-loader-spinner";
+import { FidgetSpinner } from "react-loader-spinner";
 
 type Props = {};
 
@@ -108,7 +108,7 @@ const Projects = (props: Props) => {
         </div>
       ) : (
         <div className="flex flex-col mx-auto justify-center items-center mt-20">
-          <Loader.FidgetSpinner
+          <FidgetSpinner
             visible={true}
             height="100"
             width="100"
