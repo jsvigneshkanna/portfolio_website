@@ -1,6 +1,6 @@
 import { urlFor } from "../../sanity/api";
 import TechIcons from "../common/TechIcons";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa/index.js";
 
 type Props = {
   projectDetails: any;
