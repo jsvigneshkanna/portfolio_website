@@ -6,7 +6,7 @@ type Props = {};
 
 const HomeIntro = (props: Props) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-20 md:gap-8 flex-shrink-0 mt-32 md:my-20 lg:my-10">
+    <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-4 md:px-10 lg:px-60 2xl:px-72 gap-12 md:gap-8 flex-shrink-0 mt-40 md:my-20 lg:my-10">
       <div className=" min-w-max">
         <fm.img
           whileHover={{ scale: [1, 1.05, 1.1, 1.05, 1, 0.9, 1], rotate: [0, 15, 0, -10, 0, 15, 0] }}
