@@ -1,34 +1,15 @@
 import { getAllProjects, getFilterProjects } from "../../sanity/api";
 import { useState, useEffect } from "react";
-import ProjectCard from "./ProjectCard";
-import RingLoader from "react-spinners/ClipLoader";
 
 type Props = {};
 
-const Projects = (props: Props) => {
-  const [projects, setProjects] = useState([]);
+const Blogs = (props: Props) => {
   const [filter, setFilter] = useState<string>("all");
-  const [projectLoaded, setProjectLoaded] = useState<boolean>(false);
   useEffect(() => {
-    const fetchProjects = async () => {
-      let cmsProjects: Array<JSON>;
-      if (filter === "all") {
-        console.log("one");
-
-        cmsProjects = await getAllProjects();
-      } else {
-        console.log("two");
-        cmsProjects = await getFilterProjects(filter);
-      }
-      setProjects(cmsProjects);
-      setProjectLoaded(true);
-    };
-    fetchProjects();
+    console.log("testing");
   }, [filter]);
   return (
     <div className="px-4 md:px-10 lg:px-60 2xl:px-72 mt-8">
-      {/* <TechFilter setFilterValue={setFilter} /> */}
-
       {/* Tech filters */}
       <div className="flex flex-row flex-wrap bg-slate-200 dark:bg-slate-700 px-2 py-2 rounded-3xl gap-4 justify-start items-center">
         <button
@@ -89,31 +70,10 @@ const Projects = (props: Props) => {
 
       <p className="mt-4 font-bold text-lg">
         <span className="underline underline-offset-8 decoration-red-500 uppercase decoration-[4px]">{filter}</span>{" "}
-        projects shown 🔥
+        Blogs shown 🔥
       </p>
-
-      {/* Project showcase  */}
-      {projectLoaded ? (
-        <div className="flex flex-wrap gap-10 justify-between items-center mt-12">
-          {projects.length != 0 ? (
-            projects.map((project) => {
-              return <ProjectCard projectDetails={project} key={project._id} />;
-            })
-          ) : (
-            <p className="flex justify-center items-center mx-auto bg-blue-400 dark:bg-blue-700 text-black dark:text-white p-5 rounded-3xl shadow-md shadow-blue-400 dark:shadow-blue-900 mt-6 font-semibold text-lg text-center">
-              😥 No projects done in this technology, Will sure make one in this for you 🫵
-            </p>
-          )}
-        </div>
-      ) : (
-        <div className="flex flex-col mx-auto justify-center items-center mt-20">
-          <p className="bg-blue-400 dark:bg-blue-700 text-black dark:text-white p-5 rounded-3xl shadow-md shadow-blue-400 dark:shadow-blue-900 font-bold text-lg">
-            Loading ... Meanwhile take a coffee 🍵
-          </p>
-        </div>
-      )}
     </div>
   );
 };
 
-export default Projects;
+export default Blogs;
