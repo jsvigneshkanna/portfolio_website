@@ -15,11 +15,19 @@ const builder = imageUrlBuilder(client);
 export async function getAllProjects() {
   const query = `*[_type == 'projects']`;
   const projectResponse = await client.fetch(query);
-  console.log("test: ", projectResponse);
-
+  console.log("all reponse: ", projectResponse);
   return projectResponse;
 }
 
 export function urlFor(source: string) {
   return builder.image(source);
+}
+
+export async function getFilterProjects(filter: string) {
+  const query = `*[_type == 'projects' && techUsed match "${filter}"]`;
+  console.log("filter query: ", query);
+
+  const projectResponse = await client.fetch(query);
+  console.log("filter response: ", projectResponse);
+  return projectResponse;
 }
