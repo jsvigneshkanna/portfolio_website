@@ -1,13 +1,15 @@
 import { getAllProjects, getFilterProjects } from "../../sanity/api";
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
-import TechFilter from "../common/TechFilter";
+// import TechFilter from "../common/TechFilter";
+import { FidgetSpinner } from "react-loader-spinner";
 
 type Props = {};
 
 const Projects = (props: Props) => {
   const [projects, setProjects] = useState([]);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState<string>("all");
+  const [projectLoaded, setProjectLoaded] = useState<boolean>(false);
   useEffect(() => {
     const fetchProjects = async () => {
       let cmsProjects: Array<JSON>;
@@ -20,6 +22,7 @@ const Projects = (props: Props) => {
         cmsProjects = await getFilterProjects(filter);
       }
       setProjects(cmsProjects);
+      setProjectLoaded(true);
     };
     fetchProjects();
   }, [filter]);
@@ -86,20 +89,37 @@ const Projects = (props: Props) => {
       </div>
 
       <p className="mt-4 font-bold text-lg">
-        <span className="underline underline-offset-8 decoration-red-500 uppercase decoration-[2px]">{filter}</span>{" "}
+        <span className="underline underline-offset-8 decoration-red-500 uppercase decoration-[4px]">{filter}</span>{" "}
         projects shown 🔥
       </p>
-      <div className="flex flex-wrap gap-10 justify-between items-center mt-12">
-        {projects.length != 0 ? (
-          projects.map((project) => {
-            return <ProjectCard projectDetails={project} key={project._id} />;
-          })
-        ) : (
-          <p className="flex justify-center items-center mx-auto bg-blue-600 text-black p-5 rounded-3xl shadow-lg shadow-blue-400 dark:shadow-blue-800 mt-6 font-semibold text-lg text-center">
-            😥 No projects done in this technology, Will sure make one in this for you 🫵
-          </p>
-        )}
-      </div>
+
+      {/* Project showcase  */}
+      {projectLoaded ? (
+        <div className="flex flex-wrap gap-10 justify-between items-center mt-12">
+          {projects.length != 0 ? (
+            projects.map((project) => {
+              return <ProjectCard projectDetails={project} key={project._id} />;
+            })
+          ) : (
+            <p className="flex justify-center items-center mx-auto bg-blue-400 dark:bg-blue-700 text-black dark:text-white p-5 rounded-3xl shadow-md shadow-blue-400 dark:shadow-blue-900 mt-6 font-semibold text-lg text-center">
+              😥 No projects done in this technology, Will sure make one in this for you 🫵
+            </p>
+          )}
+        </div>
+      ) : (
+        <div className="flex flex-col mx-auto justify-center items-center mt-20">
+          <FidgetSpinner
+            visible={true}
+            height="100"
+            width="100"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+            ballColors={["#bf00ff", "#ff0000", "#2eb82e"]}
+            backgroundColor="#2e2eb8"
+          />
+        </div>
+      )}
     </div>
   );
 };
