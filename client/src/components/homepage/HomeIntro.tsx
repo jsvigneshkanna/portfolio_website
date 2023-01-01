@@ -41,8 +41,10 @@ const HomeIntro = (props: Props) => {
           />
         </h3>
         <p className="font-medium text-lg ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non obcaecati suscipit, officiis dolor, eaque labore
-          rerum cum consectetur maxime quae vero sit eveniet qui aut. Eaque neque soluta facilis adipisci.
+          I have been coding for last 7 years (whoof). I started with plain HTML and CSS3 for making website clones and
+          gradually moved to newer frameworks. I am working as full-time software engineer in `Gain Credit`. I also do
+          freelance works on mobile and web app development. I started writing technology blogs from 2023 as a new year
+          resolution which you can find below.
         </p>
       </div>
     </div>
