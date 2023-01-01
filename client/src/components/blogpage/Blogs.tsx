@@ -70,7 +70,7 @@ const Blogs = (props: Props) => {
 
       <p className="mt-4 font-bold text-lg">
         <span className="underline underline-offset-8 decoration-red-500 uppercase decoration-[4px]">{filter}</span>{" "}
-        Blogs shown 🔥
+        Blogs shown ⚡
       </p>
     </div>
   );
