@@ -1,6 +1,8 @@
 import { urlFor } from "../../sanity/api";
 import TechIcons from "../common/TechIcons";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa/index.js";
+// import { FaGithub, FaExternalLinkAlt } from "react-icons/fa/index.js";
+import GithubBtn from "../buttons/GithubBtn";
+import DemoLink from "../buttons/DemoLink";
 
 type Props = {
   projectDetails: any;
@@ -30,7 +32,7 @@ const ProjectCard = (props: Props) => {
         <div className="flex flex-row justify-between items-center gap-12 text-lg">
           {projectDetails.githubUrl ? (
             <a href={projectDetails.githubUrl} rel="noreferrer" target="_blank">
-              <FaGithub />
+              <GithubBtn />
             </a>
           ) : (
             ""
@@ -38,7 +40,7 @@ const ProjectCard = (props: Props) => {
 
           {projectDetails.projectUrl ? (
             <a href={projectDetails.projectUrl} rel="noreferrer" target="_blank">
-              <FaExternalLinkAlt />
+              <DemoLink />
             </a>
           ) : (
             ""
