@@ -1,8 +1,7 @@
 import { getAllProjects, getFilterProjects } from "../../sanity/api";
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
-// import TechFilter from "../common/TechFilter";
-import { FidgetSpinner } from "react-loader-spinner";
+import RingLoader from "react-spinners/ClipLoader";
 
 type Props = {};
 
@@ -108,16 +107,7 @@ const Projects = (props: Props) => {
         </div>
       ) : (
         <div className="flex flex-col mx-auto justify-center items-center mt-20">
-          <FidgetSpinner
-            visible={true}
-            height="100"
-            width="100"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-            ballColors={["#bf00ff", "#ff0000", "#2eb82e"]}
-            backgroundColor="#2e2eb8"
-          />
+          <RingLoader color="#36d7b7" size={80} />
         </div>
       )}
     </div>
