@@ -107,7 +107,9 @@ const Projects = (props: Props) => {
         </div>
       ) : (
         <div className="flex flex-col mx-auto justify-center items-center mt-20">
-          <RingLoader color="#36d7b7" size={80} />
+          <p className="bg-blue-400 dark:bg-blue-700 text-black dark:text-white p-5 rounded-3xl shadow-md shadow-blue-400 dark:shadow-blue-900 font-bold text-lg">
+            Loading ... Meanwhile take a coffee 🍵
+          </p>
         </div>
       )}
     </div>
