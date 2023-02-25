@@ -19,7 +19,7 @@ const HomeIntro = (props: Props) => {
             }}
             src={vk_image}
             alt="vignesh kanna image"
-            className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover shadow-lg shadow-slate-900/80 dark:shadow-rose-900/60 cursor-pointer"
+            className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover shadow-lg shadow-fuchsia-900/80 dark:shadow-rose-900/50 cursor-pointer"
           />
         </a>
       </div>
