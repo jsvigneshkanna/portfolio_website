@@ -27,7 +27,7 @@ const MobileNavbar = (props: Props) => {
     },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const MenuIcon = isMenuOpen ? <RiCloseFill size={24} /> : <GiHamburgerMenu size={24} />;
+  const MenuIcon = isMenuOpen ? <RiCloseFill size={26} /> : <GiHamburgerMenu size={26} />;
   const openAnimationConfiguration = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
