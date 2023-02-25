@@ -23,13 +23,13 @@ const navLinks = [
 ];
 ---
 
-<!-- Non mobile Menu -->
-<div class=" justify-between items-center bg-gradient-to-r from-sky-500/80 to-blue-900/90 dark:bg-gradient-to-r dark:from-blue-900/60 dark:to-cyan-900/60 shadow-md shadow-slate-400 dark:shadow-blue-800/75 px-4 md:px-10 lg:px-60 2xl:px-72 py-3 hidden md:flex">
+<!-- big screens Navbar -->
+<div
+  class="justify-between items-center bg-gradient-to-r from-fuchsia-200 to-blue-200 dark:from-purple-900 dark:to-blue-900 shadow-lg shadow-fuchsia-900/30 dark:shadow-blue-800/30 px-4 md:px-10 lg:px-60 2xl:px-72 py-4 hidden md:flex"
+>
   {/* Left navlinks */}
-  <div class="flex justify-center items-center gap-6 ">
-    {
-        navLinks.map((navLink) => <NavLink navHeader={navLink["name"]} navHref={navLink["href"]} />)
-    }
+  <div class="flex justify-center items-center gap-6">
+    {navLinks.map((navLink) => <NavLink navHeader={navLink["name"]} navHref={navLink["href"]} />)}
   </div>
   {/* theme toggler */}
   <DarkModeToggle client:visible />
@@ -37,5 +37,5 @@ const navLinks = [
 
 <!-- Mobile Menu -->
 <div class="flex md:hidden">
-    <MobileNavbar client:load />
+  <MobileNavbar client:load />
 </div>
