@@ -44,11 +44,10 @@ const MobileNavbar = (props: Props) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 0.6 }}
-      className="flex flex-col justify-center items-center gap-20 py-20 pt-40 mx-auto absolute top-0 left-0 w-full
-    dark:bg-gradient-to-br dark:from-purple-900 bg-gradient-to-bl from-blue-300 to-orange-400 dark:to-cyan-800 z-10"
+      transition={{ duration: 0.8 }}
+      className="flex flex-col justify-start items-center py-44 gap-16 mx-auto absolute top-0 left-0 w-full h-[100vh] dark:bg-gradient-to-br dark:from-fuchsia-900 bg-gradient-to-bl from-rose-300 to-blue-200 dark:to-blue-800 z-10"
     >
-      <div className="absolute top-10 left-6">
+      <div className="absolute top-12 left-6">
         <DarkModeToggle />
       </div>
       <div className="absolute top-12 right-6" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -60,10 +59,10 @@ const MobileNavbar = (props: Props) => {
     </fm.div>
   ) : (
     <div>
-      <div className="absolute top-10 right-6">
+      <div className="absolute top-12 right-6">
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>{MenuIcon}</div>
       </div>
-      <div className="absolute top-8 left-6">
+      <div className="absolute top-12 left-6">
         <DarkModeToggle />
       </div>
     </div>
