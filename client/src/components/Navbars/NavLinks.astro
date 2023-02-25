@@ -1,7 +1,7 @@
 ---
 interface Props {
-    navHeader: string;
-    navHref: string;
+  navHeader: string;
+  navHref: string;
 }
 const navHeader = Astro.props.navHeader;
 const navHref = Astro.props.navHref;
@@ -13,9 +13,8 @@ const isCurrent = Astro.url.pathname.endsWith(navHref);
     href={navHref}
     aria-current={isCurrent ? "page" : "false"}
     class:list={[
-      " font-bold text-[17px] 2xl:text-lg hover:scale-105 capitalize dark:hover:bg-blue-700 hover:bg-cyan-400 px-3 py-2 rounded-xl transition-transform transition-shadow hover:shadow-md hover:shadow-blue-400/80 dark:hover:shadow-blue-900/90",
-      isCurrent ? "shadow-md shadow-sky-700/80 dark:shadow-blue-700/60" : "",
+      " font-medium text-[16px] 2xl:text-lg hover:scale-105 capitalize dark:hover:bg-rose-900 hover:bg-slate-200 px-3 py-2 rounded-full transition-transform transition-shadow hover:shadow-md hover:shadow-fuchsia-900/30 dark:hover:shadow-slate-900/30",
+      isCurrent ? "shadow-md shadow-slate-900/40 dark:shadow-slate-900/50" : "",
     ]}>{navHeader}</a
   >
 </div>
-
