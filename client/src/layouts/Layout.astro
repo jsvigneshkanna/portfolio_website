@@ -1,41 +1,41 @@
 ---
 export interface Props {
-	title?: string;
+  title?: string;
 }
 
-const { title='Home' } = Astro.props;
+const { title = "Home" } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-        <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-		<title>Vignesh Kanna | {title}</title>
-	</head>
-	<body class=" bg-yellow-100/10 dark:bg-slate-900 min-h-screen text-slate-800 dark:text-white">
-		<slot />
-	</body>
-    <!-- Inline Script for darkmode toggle to avoid FCUS -->
-    <script is:inline>
-      function getUserTheme() {
-        try {
-          return localStorage.getItem("theme");
-        } catch {
-          return null;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <title>Vignesh Kanna | {title}</title>
+  </head>
+  <body class="bg-violet-200/80 dark:bg-slate-900 text-slate-900 dark:text-white">
+    <slot />
+  </body>
+  <!-- Inline Script for darkmode toggle to avoid FCUS -->
+  <script is:inline>
+    function getUserTheme() {
+      try {
+        return localStorage.getItem("theme");
+      } catch {
+        return null;
       }
-      const userTheme = getUserTheme();
-      const isDarkOs = matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = userTheme === "dark" || (!userTheme && isDarkOs);
-      const html = document.documentElement;
-      if (isDark) {
-        html.classList.add("dark");
-      } else {
-        html.classList.remove("dark");
-      }
-    </script>
+    }
+    const userTheme = getUserTheme();
+    const isDarkOs = matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = userTheme === "dark" || (!userTheme && isDarkOs);
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+  </script>
 </html>
