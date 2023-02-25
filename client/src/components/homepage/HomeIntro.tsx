@@ -39,7 +39,7 @@ const HomeIntro = (props: Props) => {
           />
           &gt;
         </h3>
-        <p className="font-normal md:font-medium text-base md:text-lg ">
+        <p className="font-normal md:font-medium text-base md:text-lg text-slate-800 dark:text-slate-300">
           I have been coding for last 7 years (whoof). I started with plain HTML and CSS3 for making website clones and
           gradually moved to newer frameworks. I am working as full-time software engineer in `Gain Credit`. I also do
           freelance works on mobile and web app development. I started writing technology blogs from 2023 as a new year
