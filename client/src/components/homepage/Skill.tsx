@@ -54,12 +54,12 @@ const skill = {
 const Skill = (props: Props) => {
   return (
     <fm.div
-      className=" group relative cursor-pointer flex"
+      className=" group relative cursor-pointer flex "
       initial={{ opacity: 0, scale: 0.4 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="rounded-full border border-slate-320 bg-slate-800 dark:bg-indigo-100 object-cover filter group-hover:grayscale transition duration-500 ease-in-out p-6 md:p-7 lg:p-10 text-slate-200 dark:text-slate-900">
+      <div className="rounded-full border border-slate-320 bg-slate-800 dark:bg-indigo-100 shadow-md shadow-fuchsia-900/40 dark:shadow-blue-500/60 object-cover filter group-hover:grayscale transition duration-500 ease-in-out p-6 md:p-7 lg:p-10 text-slate-200 dark:text-slate-900">
         {skill[props.name.toLowerCase()]}
       </div>
       <div className="absolute opacity-0 group-hover:opacity-90 transition duration-320 ease-in-out dark:group-hover:bg-indigo-100 group-hover:bg-blue-900 w-full h-full rounded-full">
