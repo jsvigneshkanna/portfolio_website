@@ -9,8 +9,8 @@ const HomeIntro = (props: Props) => {
   const [bioType, setBioType] = useState("short");
   return (
     <div
-      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center h-[80vh] px-6 md:px-10 lg:px-60 2xl:px-72 gap-8 md:gap-16 mt-40 md:my-20 ${
-        bioType === "short" ? " lg:my-10" : "lg:my-32 2xl:my-14"
+      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60 2xl:px-72 gap-8 md:gap-16 mt-40 md:my-20 ${
+        bioType === "short" ? " lg:my-10" : "lg:my-24 2xl:my-14"
       }  `}
     >
       <div className=" min-w-max">
@@ -49,7 +49,9 @@ const HomeIntro = (props: Props) => {
         {/* bio types */}
         <div className="flex flex-row gap-8 md:gap-4 justify-center items-center md:justify-start font-base md:font-medium">
           <h5
-            className=" px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline outline-fuchsia-400 dark:bg-slate-700 dark:outline-blue-400"
+            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 outline dark:outline-blue-400 ${
+              bioType === "short" ? "outline" : "outline-0"
+            }`}
             onClick={() => {
               setBioType("short");
             }}
@@ -57,7 +59,9 @@ const HomeIntro = (props: Props) => {
             Short bio
           </h5>
           <h5
-            className=" px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline outline-fuchsia-400 dark:bg-slate-700 dark:outline-blue-400"
+            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 dark:outline-blue-400 ${
+              bioType === "long" ? "outline" : "outline-0"
+            }`}
             onClick={() => {
               setBioType("long");
             }}
@@ -117,17 +121,6 @@ const HomeIntro = (props: Props) => {
             </p>
           </div>
         )}
-        {/* <p className="font-medium md:font-medium text-base md:text-lg text-slate-700 dark:text-slate-300">
-          I have been coding for last 7 years (whoof). I started with plain HTML and CSS3 for making{" "}
-          <span className="underline underline-offset-4 decoration-2 decoration-orange-500 dark:decoration-green-500 ">
-            <a href="https://vigneshkanna-quizapp.netlify.app/" target="_blank" rel="noreferrer">
-              website clones
-            </a>
-          </span>{" "}
-          and gradually moved to newer frameworks. I am working as full-time software engineer in `Gain Credit`. I also
-          do freelance works on mobile and web app development. I started writing technology blogs from 2023 as a new
-          year resolution which you can in the blog section.
-        </p> */}
       </div>
     </div>
   );
