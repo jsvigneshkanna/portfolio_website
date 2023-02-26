@@ -5,6 +5,7 @@ import HomeIntro from "../components/homepage/HomeIntro";
 import QuickLinks from "../components/common/quickLinks";
 import WorkExperiences from "../components/homepage/WorkExperiences";
 import LinkedInRecommendations from "../components/homepage/LinkedInRecommendations";
+import SkillsSection from "../components/homepage/SkillsSection";
 ---
 
 <Layout title="Home">
@@ -13,6 +14,7 @@ import LinkedInRecommendations from "../components/homepage/LinkedInRecommendati
     <HomeIntro client:load />
     <QuickLinks client:visible />
     <WorkExperiences client:visible />
+    <SkillsSection client:visible />
     <LinkedInRecommendations client:visible />
   </main>
 </Layout>

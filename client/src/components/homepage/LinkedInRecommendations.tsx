@@ -6,7 +6,7 @@ type Props = {};
 const LinkedInRecommendations = (props: Props) => {
   return (
     <div className="mt-24 px-6 md:px-10 lg:px-60 2xl:px-72">
-      <p className="text-lg md:text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-fuchsia-500 dark:decoration-yellow-500 text-center lg:text-left">
+      <p className="text-lg md:text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-fuchsia-500 dark:decoration-yellow-500 text-center">
         My LinkedIn Recommendations
       </p>
       <fm.div
