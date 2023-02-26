@@ -95,7 +95,7 @@ const HomeIntro = (props: Props) => {
           </p>
         )}
         {bioType === "long" && (
-          <div className="font-medium md:font-medium text-base md:text-base text-slate-700 dark:text-slate-300 flex flex-col justify-center items-start gap-4">
+          <div className="font-medium md:font-medium text-base md:text-base text-slate-700 dark:text-slate-300 flex flex-col justify-center items-start gap-4 mt-3 lg:mt-0">
             <p>
               🔥 Hello and welcome to my portfolio! I am a seasoned software engineer with 3 years of experience in the
               industry and coding for last 7 years (whoof).
