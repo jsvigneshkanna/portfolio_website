@@ -25,7 +25,7 @@ const HomeIntro = (props: Props) => {
       </div>
       <div className="flex flex-col gap-8">
         <h1 className=" text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">J S Vignesh Kanna</h1>
-        <h3 className="text-lg lg:text-xl md:text-xl 2xl:text-3xl font-semibold tracking-widest text-blue-600 dark:text-yellow-400 flex flex-row gap-3">
+        <h3 className="text-lg lg:text-xl md:text-xl 2xl:text-3xl font-bold tracking-widest text-blue-600 dark:text-yellow-400 flex flex-row gap-3">
           I am &lt;
           <Typewriter
             options={{
@@ -39,7 +39,7 @@ const HomeIntro = (props: Props) => {
           />
           &gt;
         </h3>
-        <p className="font-normal md:font-medium text-base md:text-lg text-slate-800 dark:text-slate-300">
+        <p className="font-medium md:font-medium text-base md:text-lg text-slate-700 dark:text-slate-300">
           I have been coding for last 7 years (whoof). I started with plain HTML and CSS3 for making website clones and
           gradually moved to newer frameworks. I am working as full-time software engineer in `Gain Credit`. I also do
           freelance works on mobile and web app development. I started writing technology blogs from 2023 as a new year
