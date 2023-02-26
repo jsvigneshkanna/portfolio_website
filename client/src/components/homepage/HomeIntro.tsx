@@ -10,7 +10,7 @@ const HomeIntro = (props: Props) => {
   return (
     <div
       className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60  2xl:px-72 gap-8 md:gap-16 mt-40  ${
-        bioType === "short" ? "md:mt-10 lg:mt-10" : " md:mt-14 lg:mt-24 2xl:mt-14"
+        bioType === "short" || "github" ? "md:mt-10 lg:mt-10" : " md:mt-14 lg:mt-24 2xl:mt-14"
       }  `}
     >
       <div className=" min-w-max">
@@ -62,6 +62,16 @@ const HomeIntro = (props: Props) => {
           </h5>
           <h5
             className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-indigo-400 dark:bg-slate-700 dark:outline-blue-400 ${
+              bioType === "github" ? "outline outline-4 md:outline-[3px]" : "outline-0"
+            }`}
+            onClick={() => {
+              setBioType("github");
+            }}
+          >
+            Github bio
+          </h5>
+          <h5
+            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-indigo-400 dark:bg-slate-700 dark:outline-blue-400 ${
               bioType === "long" ? "outline outline-4 md:outline-[3px]" : "outline-0"
             }`}
             onClick={() => {
@@ -94,6 +104,33 @@ const HomeIntro = (props: Props) => {
             . I started writing technology blogs from 2023 as a new year resolution which you can in the blog section.
           </p>
         )}
+
+        {bioType === "github" && (
+          <>
+            <div className="font-medium md:font-medium text-base md:text-lg w-full text-slate-700 dark:text-slate-300 mt-3 lg:mt-0">
+              <p>🌍 I'm based in India</p>
+              <p>
+                ✉️ You can contact me at{" "}
+                <span className="underline underline-offset-4 decoration-2 decoration-orange-500 dark:decoration-green-500 hover:bg-orange-500 hover:text-white dark:hover:bg-green-500 dark:hover:text-black">
+                  vkrishitaran@gmail.com
+                </span>
+              </p>
+              <p>🚀 I'm currently working on Gain Credit</p>
+              <p>🧠 I'm learning Astro, NextJS13, Web3 - 🤝</p>
+              <p>🤝 I'm open to collaborating on Web3 and Web2 project</p>
+              <p>🎮 I love to play games, expecially GTA5 and NFS. I have memorized almost all cheatcodes</p>
+            </div>
+            <a
+              href="https://github.com/jsvigneshkanna"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1 rounded-lg bg-indigo-200 dark:bg-indigo-700 w-max font-medium hover:scale-105 shadow-md shadow-slate-900/40 dark:shadow-rose-800/50"
+            >
+              Github quick check 👉
+            </a>
+          </>
+        )}
+
         {bioType === "long" && (
           <div className="font-medium md:font-medium text-base md:text-base text-slate-700 dark:text-slate-300 flex flex-col justify-center items-start gap-4 mt-3 lg:mt-0">
             <p>
