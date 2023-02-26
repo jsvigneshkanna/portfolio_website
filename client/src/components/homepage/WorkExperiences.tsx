@@ -12,7 +12,7 @@ const WorkExperiences = (props: Props) => {
       </p>
       <div className=" mt-6 flex flex-col overflow-hidden justify-center items-start relative gap-8 py-5 md:py-20">
         {/* middle line */}
-        <div className="w-1  md:w-[6px]  bg-gradient-to-b from-orange-500 to-emarald-500 dark:from-rose-500 dark:to-blue-500 h-full rounded-full absolute top-0 left-4 md:left-[50%]"></div>
+        <div className="w-1  md:w-[6px]  bg-gradient-to-b from-orange-500 to-emerald-600 dark:from-rose-500 dark:to-blue-500 h-full rounded-full absolute top-0 left-4 md:left-[50%]"></div>
 
         {workExperiences.map((workExperience) => {
           if (workExperience.id % 2 != 0) {
