@@ -22,6 +22,7 @@ import {
   SiCraftcms,
 } from "react-icons/si/index.js";
 import { RiReactjsLine } from "react-icons/ri/index.js";
+import { motion as fm } from "framer-motion";
 
 type Props = {
   name: string;
@@ -52,7 +53,12 @@ const skill = {
 };
 const Skill = (props: Props) => {
   return (
-    <div className=" group relative cursor-pointer flex">
+    <fm.div
+      className=" group relative cursor-pointer flex"
+      initial={{ opacity: 0, scale: 0.4 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className="rounded-full border border-slate-320 bg-slate-800 dark:bg-indigo-100 object-cover filter group-hover:grayscale transition duration-500 ease-in-out p-6 md:p-7 lg:p-10 text-slate-200 dark:text-slate-900">
         {skill[props.name.toLowerCase()]}
       </div>
@@ -66,7 +72,7 @@ const Skill = (props: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </fm.div>
   );
 };
 

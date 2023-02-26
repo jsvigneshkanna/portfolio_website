@@ -9,7 +9,7 @@ const SkillsSection = (props: Props) => {
       <p className="text-lg md:text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-slate-800 dark:decoration-violet-300 text-center decoration-3">
         My Skills
       </p>
-      <p className="text-sm md:text-base lg:text-lg font-medium text-center mt-7 tracking-wider md:tracking-[6px] text-slate-500">
+      <p className="text-sm md:text-base lg:text-lg font-medium text-center mt-7 tracking-wider md:tracking-[6px] text-rose-600 dark:text-slate-500">
         Hover over a skill for my current profieciency
       </p>
       <div className="w-full flex justify-center items-center">
