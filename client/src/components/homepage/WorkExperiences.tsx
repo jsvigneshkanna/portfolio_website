@@ -19,7 +19,7 @@ const WorkExperiences = (props: Props) => {
             return (
               <fm.div
                 className="md:w-full flex flex-row ml-10 md:ml-0 justify-start md:justify-start items-center"
-                initial={{ x: -200, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ const WorkExperiences = (props: Props) => {
             return (
               <fm.div
                 className="md:w-full flex flex-row ml-10 md:ml-0 justify-start md:justify-end items-center"
-                initial={{ x: 200, opacity: 0 }}
+                initial={{ x: 100, opacity: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
