@@ -1,12 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbars/Navbar.astro';
-import HomeIntro from '../components/homepage/HomeIntro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbars/Navbar.astro";
+import HomeIntro from "../components/homepage/HomeIntro";
+import QuickLinks from "../components/common/quickLinks";
 ---
 
 <Layout title="Home">
-	<main class="mb-20">
-        <Navbar />
-        <HomeIntro client:load />
-    </main>
+  <main class="mb-20">
+    <Navbar />
+    <HomeIntro client:load />
+    <QuickLinks client:visible />
+  </main>
 </Layout>
