@@ -5,7 +5,7 @@ type Props = {};
 
 const QuickLinks = (props: Props) => {
   return (
-    <div className="px-6 md:px-10 lg:px-60 2xl:px-72 mt-24 flex flex-col justify-center items-center  gap-3">
+    <div className="px-6 md:px-10 lg:px-60 2xl:px-72  flex flex-col justify-center items-center  gap-3">
       <p className="text-xl lg:text-3xl text-center w-full font-bold underline underline-offset-8 decoration-orange-500 dark:decoration-rose-500">
         My quick Links
       </p>

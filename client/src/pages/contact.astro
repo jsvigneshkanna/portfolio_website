@@ -1,10 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbars/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbars/Navbar.astro";
+import ContactTitle from "../components/contactpage/ContactTitle";
+import QuickLinks from "../components/common/quickLinks";
+import ContactForm from "../components/contactpage/ContactForm.astro";
 ---
 
 <Layout title="Contact Me">
-	<main class="mb-20">
-        <Navbar />
-    </main>
+  <main class="mb-20">
+    <Navbar />
+    <ContactTitle />
+    <div class="mt-10">
+      <QuickLinks />
+    </div>
+    <ContactForm />
+  </main>
 </Layout>
