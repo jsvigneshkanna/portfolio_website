@@ -14,7 +14,7 @@ const HomeIntro = (props: Props) => {
       }  `}
     >
       <div className=" min-w-max">
-        <a href="https://github.com/jsvigneshkanna" target="_blank" rel="norefferer">
+        <a href="https://github.com/jsvigneshkanna" target="_blank" rel="norefferer" id="home-dp">
           <fm.img
             whileHover={{ scale: [1, 1.05, 1.1, 1.05, 1, 0.9, 1], rotate: [0, 15, 0, -10, 0, 15, 0] }}
             whileTap={{ scale: [1, 1.05, 1.1, 1.05, 1, 0.9, 1], rotate: [0, 15, 0, -10, 0, 15, 0] }}
@@ -29,7 +29,7 @@ const HomeIntro = (props: Props) => {
           />
         </a>
       </div>
-      <div className="flex flex-col gap-8 ">
+      <div className="flex flex-col gap-8 " id="home-intro">
         <h1 className="text-center hover:animate-bounce duration-200 lg:text-left text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">
           J S Vignesh Kanna
         </h1>

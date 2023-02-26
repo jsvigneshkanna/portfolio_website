@@ -6,10 +6,11 @@ import QuickLinks from "../components/common/quickLinks";
 import WorkExperiences from "../components/homepage/WorkExperiences";
 import LinkedInRecommendations from "../components/homepage/LinkedInRecommendations";
 import SkillsSection from "../components/homepage/SkillsSection";
+import Footer from "../components/common/Footer.astro";
 ---
 
 <Layout title="Home">
-  <main class="mb-20">
+  <main class="mb-14">
     <Navbar />
     <HomeIntro client:load />
     <div class="mt-24">
@@ -18,5 +19,6 @@ import SkillsSection from "../components/homepage/SkillsSection";
     <WorkExperiences client:visible />
     <SkillsSection client:visible />
     <LinkedInRecommendations client:visible />
+    <Footer />
   </main>
 </Layout>
