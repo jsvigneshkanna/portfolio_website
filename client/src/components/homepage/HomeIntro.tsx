@@ -25,7 +25,7 @@ const HomeIntro = (props: Props) => {
             }}
             src={vk_image}
             alt="vignesh kanna image"
-            className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover shadow-lg shadow-fuchsia-700/70 dark:shadow-rose-900/70 cursor-pointer"
+            className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover shadow-lg shadow-indigo-700/70 dark:shadow-rose-900/70 cursor-pointer"
           />
         </a>
       </div>
@@ -51,7 +51,7 @@ const HomeIntro = (props: Props) => {
         {/* bio types */}
         <div className="flex flex-row gap-8 md:gap-4 justify-center items-center lg:justify-start font-base md:font-medium">
           <h5
-            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 outline dark:outline-blue-400 ${
+            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-indigo-400 dark:bg-slate-700 outline dark:outline-blue-400 ${
               bioType === "short" ? "outline outline-4 md:outline-[3px]" : "outline-0"
             }`}
             onClick={() => {
@@ -61,7 +61,7 @@ const HomeIntro = (props: Props) => {
             Short bio
           </h5>
           <h5
-            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 dark:outline-blue-400 ${
+            className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-indigo-400 dark:bg-slate-700 dark:outline-blue-400 ${
               bioType === "long" ? "outline outline-4 md:outline-[3px]" : "outline-0"
             }`}
             onClick={() => {
