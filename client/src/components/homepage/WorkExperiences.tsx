@@ -1,4 +1,5 @@
-import React from "react";
+import workExperiences from "../../data/workExperience";
+import WorkExperienceSection from "./WorkExperienceSection";
 
 type Props = {};
 
@@ -8,11 +9,42 @@ const WorkExperiences = (props: Props) => {
       <p className="text-lg md:text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-cyan-500 dark:decoration-blue-500">
         My Journey into software engineering
       </p>
-      <div className="w-full mt-6 flex flex-col justify-center items-start relative gap-8 pt-10">
+      <div className="w-full mt-6 flex flex-col justify-center items-start relative gap-8 py-14">
         {/* middle line */}
-        <div className="w-1 bg-gradient-to-b from-cyan-500 to-orange-500 dark:from-blue-500 dark:to-rose-500 h-full rounded-full absolute top-0 left-[50%]"></div>
+        <div className="w-[6px] bg-gradient-to-b from-cyan-500 to-orange-500 dark:from-blue-500 dark:to-rose-500 h-full rounded-full absolute top-0 left-[50%]"></div>
 
-        {/* 1st experience */}
+        {workExperiences.map((workExperience) => {
+          if (workExperience.id % 2 != 0) {
+            return (
+              <div className="w-full flex flex-row justify-start items-center">
+                <WorkExperienceSection
+                  id={workExperience.id}
+                  companyName={workExperience.companyName}
+                  designation={workExperience.designation}
+                  place={workExperience.place}
+                  duration={workExperience.duration}
+                  skills={workExperience.skills}
+                  description={workExperience.description}
+                />
+              </div>
+            );
+          } else {
+            return (
+              <div className="w-full flex flex-row justify-end items-center">
+                <WorkExperienceSection
+                  id={workExperience.id}
+                  companyName={workExperience.companyName}
+                  designation={workExperience.designation}
+                  place={workExperience.place}
+                  duration={workExperience.duration}
+                  skills={workExperience.skills}
+                  description={workExperience.description}
+                />
+              </div>
+            );
+          }
+        })}
+        {/*         
         <div className="w-full flex flex-row justify-start items-center">
           <div className="w-[46%]">
             <div className="flex flex-row justify-start items-center gap-3 w-full">
@@ -31,7 +63,6 @@ const WorkExperiences = (props: Props) => {
           </div>
         </div>
 
-        {/* 2nd experience */}
         <div className="w-full flex flex-row justify-end items-center">
           <div className="w-[46%]">
             <div className="flex flex-row justify-start items-center gap-3 w-full">
@@ -50,7 +81,6 @@ const WorkExperiences = (props: Props) => {
           </div>
         </div>
 
-        {/* 3rd experience */}
         <div className="w-full flex flex-row justify-start items-center">
           <div className="w-[46%]">
             <div className="flex flex-row justify-start items-center gap-3 w-full">
@@ -69,7 +99,6 @@ const WorkExperiences = (props: Props) => {
           </div>
         </div>
 
-        {/* 4th experience */}
         <div className="w-full flex flex-row justify-end items-center">
           <div className="w-[46%]">
             <div className="flex flex-row justify-start items-center gap-3 w-full">
@@ -88,7 +117,6 @@ const WorkExperiences = (props: Props) => {
           </div>
         </div>
 
-        {/* 5th experience */}
         <div className="w-full flex flex-row justify-start items-center">
           <div className="w-[46%]">
             <div className="flex flex-row justify-start items-center gap-3 w-full">
@@ -105,7 +133,7 @@ const WorkExperiences = (props: Props) => {
               Apache Airflow project single handedly in span of 3 months comprising
             </p>
           </div>
-        </div>
+        </div>*/}
       </div>
     </div>
   );
