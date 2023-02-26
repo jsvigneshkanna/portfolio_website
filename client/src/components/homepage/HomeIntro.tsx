@@ -9,7 +9,7 @@ const HomeIntro = (props: Props) => {
   const [bioType, setBioType] = useState("short");
   return (
     <div
-      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60 2xl:px-72 gap-8 md:gap-16 mt-40  ${
+      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60  2xl:px-72 gap-8 md:gap-16 mt-40  ${
         bioType === "short" ? "md:mt-10 lg:mt-10" : " md:mt-14 lg:mt-24 2xl:mt-14"
       }  `}
     >
@@ -30,7 +30,7 @@ const HomeIntro = (props: Props) => {
         </a>
       </div>
       <div className="flex flex-col gap-8 ">
-        <h1 className="text-center lg:text-left text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">
+        <h1 className="text-center hover:animate-bounce duration-200 lg:text-left text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">
           J S Vignesh Kanna
         </h1>
         <h3 className="justify-center lg:justify-start items-center text-lg lg:text-xl md:text-xl 2xl:text-3xl font-bold tracking-widest text-blue-600 dark:text-yellow-500 hover:text-orange-500 dark:hover:text-green-500 flex flex-row gap-3">
