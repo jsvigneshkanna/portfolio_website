@@ -4,6 +4,7 @@ import Navbar from "../components/Navbars/Navbar.astro";
 import HomeIntro from "../components/homepage/HomeIntro";
 import QuickLinks from "../components/common/quickLinks";
 import WorkExperiences from "../components/homepage/WorkExperiences";
+import LinkedInRecommendations from "../components/homepage/LinkedInRecommendations";
 ---
 
 <Layout title="Home">
@@ -12,5 +13,6 @@ import WorkExperiences from "../components/homepage/WorkExperiences";
     <HomeIntro client:load />
     <QuickLinks client:visible />
     <WorkExperiences />
+    <LinkedInRecommendations />
   </main>
 </Layout>
