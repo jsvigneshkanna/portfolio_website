@@ -12,10 +12,11 @@ const LinkedInRecommendations = (props: Props) => {
       <fm.div
         className="mt-10 lg:mt-14 w-full"
         initial={{
-          scale: 0.8,
+          y: 80,
+          x: -100,
           opacity: 0,
         }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 1 }}
       >
         <a
