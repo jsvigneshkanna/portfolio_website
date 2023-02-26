@@ -1,15 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbars/Navbar.astro';
-import BlogPageBanner from '../components/blogpage/BlogPageBanner.astro';
-import Blogs from '../components/blogpage/Blogs.tsx';
-
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbars/Navbar.astro";
+import BlogPageBanner from "../components/blogpage/BlogPageBanner.astro";
+import Blogs from "../components/blogpage/Blogs";
 ---
 
 <Layout title="Blogs">
-	<main class="mb-20">
-        <Navbar />
-        <BlogPageBanner />
-        <Blogs />
-    </main>
+  <main class="mb-20">
+    <Navbar />
+    <BlogPageBanner />
+    <Blogs />
+  </main>
 </Layout>
