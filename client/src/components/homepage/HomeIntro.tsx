@@ -9,8 +9,8 @@ const HomeIntro = (props: Props) => {
   const [bioType, setBioType] = useState("short");
   return (
     <div
-      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60 2xl:px-72 gap-8 md:gap-16 mt-40 md:my-20 ${
-        bioType === "short" ? " lg:my-10" : "lg:my-24 2xl:my-14"
+      className={`flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[80vh] px-6 md:px-10 lg:px-60 2xl:px-72 gap-8 md:gap-16 mt-40  ${
+        bioType === "short" ? "md:mt-10 lg:mt-10" : " md:mt-14 lg:mt-24 2xl:mt-14"
       }  `}
     >
       <div className=" min-w-max">
@@ -30,8 +30,10 @@ const HomeIntro = (props: Props) => {
         </a>
       </div>
       <div className="flex flex-col gap-8 ">
-        <h1 className=" text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">J S Vignesh Kanna</h1>
-        <h3 className="text-lg lg:text-xl md:text-xl 2xl:text-3xl font-bold tracking-widest text-blue-600 dark:text-yellow-500 hover:text-orange-500 dark:hover:text-green-500 flex flex-row gap-3">
+        <h1 className="text-center lg:text-left text-3xl lg:text-4xl md:text-4xl 2xl:text-7xl font-black tracking-widest">
+          J S Vignesh Kanna
+        </h1>
+        <h3 className="justify-center lg:justify-start items-center text-lg lg:text-xl md:text-xl 2xl:text-3xl font-bold tracking-widest text-blue-600 dark:text-yellow-500 hover:text-orange-500 dark:hover:text-green-500 flex flex-row gap-3">
           I am &lt;
           <Typewriter
             options={{
@@ -47,10 +49,10 @@ const HomeIntro = (props: Props) => {
         </h3>
 
         {/* bio types */}
-        <div className="flex flex-row gap-8 md:gap-4 justify-center items-center md:justify-start font-base md:font-medium">
+        <div className="flex flex-row gap-8 md:gap-4 justify-center items-center lg:justify-start font-base md:font-medium">
           <h5
             className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 outline dark:outline-blue-400 ${
-              bioType === "short" ? "outline" : "outline-0"
+              bioType === "short" ? "outline outline-4 md:outline-[3px]" : "outline-0"
             }`}
             onClick={() => {
               setBioType("short");
@@ -60,7 +62,7 @@ const HomeIntro = (props: Props) => {
           </h5>
           <h5
             className={`px-3 py-2 bg-violet-200 rounded-lg hover:scale-105 cursor-pointer outline-fuchsia-400 dark:bg-slate-700 dark:outline-blue-400 ${
-              bioType === "long" ? "outline" : "outline-0"
+              bioType === "long" ? "outline outline-4 md:outline-[3px]" : "outline-0"
             }`}
             onClick={() => {
               setBioType("long");
@@ -70,7 +72,7 @@ const HomeIntro = (props: Props) => {
           </h5>
         </div>
         {bioType === "short" && (
-          <p className="font-medium md:font-medium text-base md:text-lg text-slate-700 dark:text-slate-300">
+          <p className="font-medium md:font-medium text-base md:text-lg text-slate-700 dark:text-slate-300 mt-3 lg:mt-0">
             I have been coding for last 7 years (whoof). I started with plain HTML and CSS3 for making{" "}
             <span className="underline underline-offset-4 decoration-2 decoration-orange-500 dark:decoration-green-500 hover:bg-orange-500 hover:text-white dark:hover:bg-green-500 dark:hover:text-black">
               <a href="https://vigneshkanna-quizapp.netlify.app/" target="_blank" rel="noreferrer">
