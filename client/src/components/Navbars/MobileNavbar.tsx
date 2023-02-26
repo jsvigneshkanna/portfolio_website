@@ -45,7 +45,7 @@ const MobileNavbar = (props: Props) => {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.6 }}
-      className="flex flex-col justify-start items-center pt-44 gap-20 mx-auto absolute top-0 left-0 w-full h-[100vh] dark:bg-gradient-to-br dark:from-fuchsia-900 bg-gradient-to-bl from-rose-300 to-blue-200 dark:to-blue-800 z-10"
+      className="flex flex-col justify-start items-center pt-44 gap-20 mx-auto absolute top-0 left-0 w-full h-[100vh] dark:bg-gradient-to-br dark:from-fuchsia-900 bg-gradient-to-bl from-rose-300 to-blue-300 dark:to-blue-800 z-10"
     >
       <div className="absolute top-12 left-6">
         <DarkModeToggle />
