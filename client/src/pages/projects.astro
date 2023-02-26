@@ -1,14 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbars/Navbar.astro';
-import ProjectPageBanner from '../components/projectspage/ProjectPageBanner.astro';
-import Projects from '../components/projectspage/Projects';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbars/Navbar.astro";
+import ProjectPageBanner from "../components/projectspage/ProjectPageBanner.astro";
+import Projects from "../components/projectspage/Projects";
+import Footer from "../components/common/Footer.astro";
 ---
 
 <Layout title="Projects">
-	<main class="mb-20">
-        <Navbar />
-        <ProjectPageBanner />
-        <Projects client:load />
-    </main>
+  <main class="mb-14">
+    <Navbar />
+    <ProjectPageBanner />
+    <Projects client:load />
+    <Footer />
+  </main>
 </Layout>
