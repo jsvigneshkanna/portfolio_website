@@ -9,7 +9,7 @@ const QuickLinks = (props: Props) => {
       <p className="text-lg md:text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-orange-500 dark:decoration-rose-500">
         Quick Links
       </p>
-      <div className="flex flex-row flex-wrap gap-6 mt-4 justify-center items-center md:justify-start">
+      <div className="flex flex-row flex-wrap gap-12 lg:gap-6 mt-4 justify-center items-center lg:justify-start">
         <a
           className="flex flex-row gap-2 shadow-md shadow-slate-800/30 dark:shadow-indigo-500/20 justify-center font-normal md:font-medium items-center px-3 p-2 rounded-lg bg-indigo-200 dark:bg-slate-800 hover:outline outline-2 outline-fuchsia-800 cursor-pointer dark:outline-violet-500"
           target="_blank"
