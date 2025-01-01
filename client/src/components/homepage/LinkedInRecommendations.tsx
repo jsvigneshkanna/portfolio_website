@@ -26,7 +26,7 @@ const LinkedInRecommendations = (props: Props) => {
           className="flex justify-center items-center"
         >
           <img
-            src={LinkedInRecommnedation}
+            src={LinkedInRecommnedation.src}
             alt="linkedin recommendation"
             className="w-[100%] md:w-[75%] rounded-lg object-cover shadow-md shadow-slate-900/40 hover:shadow-lg hover:shadow-slate-900/60 dark:shadow-blue-600/50"
           />

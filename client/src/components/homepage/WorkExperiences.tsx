@@ -18,6 +18,7 @@ const WorkExperiences = (props: Props) => {
           if (workExperience.id % 2 != 0) {
             return (
               <fm.div
+                key={workExperience.id}
                 className="md:w-full flex flex-row ml-10 md:ml-0 justify-start md:justify-start items-center"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -38,6 +39,7 @@ const WorkExperiences = (props: Props) => {
           } else {
             return (
               <fm.div
+                key={workExperience.id}
                 className="md:w-full flex flex-row ml-10 md:ml-0 justify-start md:justify-end items-center"
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}

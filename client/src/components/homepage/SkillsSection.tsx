@@ -14,8 +14,8 @@ const SkillsSection = (props: Props) => {
       </p>
       <div className="w-full flex justify-center items-center">
         <div className="mt-12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-8 ">
-          {SkillDetails.map((skillDetail) => {
-            return <Skill name={skillDetail.name} value={skillDetail.value} />;
+          {SkillDetails.map((skillDetail, index) => {
+            return <Skill key={index} name={skillDetail.name} value={skillDetail.value} />;
           })}
         </div>
       </div>

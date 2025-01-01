@@ -23,7 +23,7 @@ const HomeIntro = (props: Props) => {
               ease: "easeInOut",
               times: [0, 0.1, 0.3, 0.5, 0.7, 0.8, 1],
             }}
-            src={vk_image}
+            src={vk_image.src}
             alt="vignesh kanna image"
             className=" rounded-[50%] w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover shadow-lg shadow-indigo-700/70 dark:shadow-rose-900/70 cursor-pointer"
           />

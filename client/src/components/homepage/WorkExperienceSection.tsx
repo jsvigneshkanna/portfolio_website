@@ -29,9 +29,11 @@ const WorkExperienceSection = (props: Props) => {
       </p>
       <div className="flex flex-row flex-wrap justify-start items-center gap-2 mt-3">
         <p className="text-sm md:text-base">Skills: </p>
-        {props.skills.map((skill) => {
+        {props.skills.map((skill, index) => {
           return (
-            <p className="px-2 py-1 rounded-md bg-indigo-200 shadow-md shadow-slate-900/30 dark:bg-slate-800 dark:shadow-slate-900 text-xs md:text-sm font-medium capitalize">
+            <p 
+              key={index}
+              className="px-2 py-1 rounded-md bg-indigo-200 shadow-md shadow-slate-900/30 dark:bg-slate-800 dark:shadow-slate-900 text-xs md:text-sm font-medium capitalize">
               {skill}
             </p>
           );
